@@ -28,6 +28,7 @@ async function fetchJoke() {
     .get("https://icanhazdadjoke.com", {
       headers: {
         Accept: "text/plain",
+        "User-Agent": "Kaori Simulator (https://github.com/AthereoAndromeda/kaori-simulator)"
       },
     })
     .text();
