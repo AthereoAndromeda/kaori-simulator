@@ -1,9 +1,16 @@
 <template>
   <div>
-    <img
-      src="https://cdn.discordapp.com/avatars/745950401441955893/67ec3fe9b61b7d52d77fab7ec7b57cd2.webp"
-      alt="Kaori's Discord PFP"
-    />
+    <picture>
+      <source
+        srcset="
+          https://cdn.discordapp.com/avatars/745950401441955893/67ec3fe9b61b7d52d77fab7ec7b57cd2.webp
+        "
+      />
+      <img
+        src="https://cdn.discordapp.com/avatars/745950401441955893/67ec3fe9b61b7d52d77fab7ec7b57cd2.jpg"
+        alt="Kaori's Discord PFP"
+      />
+    </picture>
 
     <h1>Kaori Simulator</h1>
     <blockquote>
