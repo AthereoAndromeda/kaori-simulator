@@ -24,16 +24,22 @@ const joke = ref("Click the Button to get started.");
 const clicks = ref(0);
 
 async function fetchJoke() {
-  joke.value = await ky
-    .get("https://icanhazdadjoke.com", {
-      headers: {
-        Accept: "text/plain",
-        "User-Agent": "Kaori Simulator (https://github.com/AthereoAndromeda/kaori-simulator)"
-      },
-    })
-    .text();
+  try {
+    joke.value = await ky
+      .get("https://icanhazdadjoke.com", {
+        headers: {
+          Accept: "text/plain",
+          "User-Agent":
+            "Kaori Simulator (https://github.com/AthereoAndromeda/kaori-simulator)",
+        },
+      })
+      .text();
 
-  clicks.value++;
+    clicks.value++;
+  } catch (error) {
+    joke.value =
+      "Error fetching a joke! If you were spamming, you prob got rate-limited dum dum";
+  }
 }
 </script>
 
@@ -114,6 +120,7 @@ button {
   white-space: nowrap;
   will-change: box-shadow, transform;
   font-size: 18px;
+
   &:focus {
     box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px,
       rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;

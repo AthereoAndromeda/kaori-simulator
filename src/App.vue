@@ -6,8 +6,13 @@ import KS from "./components/KaoriSimulator.vue";
   <KS />
 
   <footer>
-    <p>Fork me on <a href="https://github.com/AthereoAndromeda/kaori-simulator">Github</a></p>
-    Powered by <a href="https://icanhazdadjoke.com">icanhazdadjoke API</a>
+    <p>
+      Fork me on
+      <a href="https://github.com/AthereoAndromeda/kaori-simulator">GitHub</a>
+    </p>
+    <p>
+      Powered by <a href="https://icanhazdadjoke.com">icanhazdadjoke API</a>
+    </p>
   </footer>
 </template>
 
